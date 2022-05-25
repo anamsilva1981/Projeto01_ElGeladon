@@ -1,0 +1,461 @@
+
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: rgb(255, 255, 255);
+  font-family: "desc";
+}
+
+.Home {
+  position: relative;
+  background: linear-gradient(45deg,#A85CF9,#5534A5,#4B7BE5,#6FDFDF);
+  min-height: calc(100vh - 60px);
+  margin: 15px;
+  padding: 15px;
+  border-radius: 20px;
+  color: black;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  background-size: 300% 300%;
+  animation: colors 15s ease infinite;
+}
+
+@keyframes colors{
+  0%{background-position: 0% 50%;}
+  50%{background-position: 100% 50%;}
+  100%{background-position: 0% 50%;}
+}
+
+.Home > h2 {
+  display: flex;
+  justify-content: space-around;
+  color: rgba(0, 0, 0, 0.719);
+  margin-bottom: 20px ;
+}
+
+.Home > div {
+  display: flex;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.795);
+  margin-top: 20px;
+}
+
+.Home__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 350px) {
+  .Home__container {
+    justify-content: unset;
+  }
+}
+
+.PaletaLista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px 50px;
+}
+
+@media (max-width: 1220px) {
+  .PaletaLista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 840px) {
+  .PaletaLista {
+    grid-template-columns: 1fr;
+  }
+}
+
+.PaletaCardItem,
+.PaletaListaItem {
+  font-family: "desc";
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  width: 315px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.PaletaCardItem {
+  margin: 20px 0;
+  height: 150px;
+  width: auto;
+}
+
+@media (max-width: 400px) {
+  .PaletaCardItem,
+  .PaletaListaItem {
+    width: 210px;
+    height: 180px;
+  }
+}
+
+.PaletaCardItem > div,
+.PaletaListaItem > div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.PaletaCardItem__sabor,
+.PaletaListaItem__sabor {
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.PaletaCardItem__descricao,
+.PaletaListaItem__descricao {
+  font-size: 0.85em;
+}
+
+.PaletaCardItem__preco,
+.PaletaListaItem__preco {
+  width : 60px;
+  height: 50px;
+  color: rgb(113, 5, 255);
+  border: solid rgba(255, 0, 212, 0.377) 1px;
+  border-radius: 50%;
+  align-items: center;
+  display: flex;
+  text-align: center;}
+
+.PaletaListaItem__foto {
+  height: 150px;
+  margin-right: -60px;
+}
+
+.paleta-escolhida-espaco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+#idPaleta {
+  padding: 0.5rem;
+  width: 315px;
+  border: none;
+  border-radius: 0.2rem;
+  
+}
+
+#idPaletaButton {
+  
+  
+  padding: 0.4rem;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.2rem;
+  width: 330px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.541) 0px 7px 29px 0px;
+	background-color: rgba(255, 255, 255, 0.13);
+	backdrop-filter: blur(10px);
+	border: 1px rgb(255, 255, 255, 0.1) solid;
+}
+
+#idPaletaButton:hover {
+  background-color: #9400d360;
+  color: #ffffff;
+}
+
+#paleta-escolhida-input-espaco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+.Header {
+  max-width: 1110px;
+  margin: 0 auto 25px auto;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 20px 0 35px 0;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 340px;
+  height: 45px;
+}
+
+.Logo__titulo {
+  position: absolute;
+  left: 55px;
+  font-family: "love";
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.Logo__icone {
+  position: absolute;
+  left: -35px;
+  top: -5px;
+}
+
+.Sacola {
+  position: relative;
+}
+
+.Sacola__icone {
+  cursor: pointer;
+}
+
+.Sacola__badge {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  color: white;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 1220px) {
+  .Header {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 840px) {
+  .Header {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 400px) {
+  .Header {
+    max-width: 250px;
+  }
+
+  .row {
+    column-gap: 20px;
+  }
+
+  .Logo__titulo {
+    font-size: 1.5em;
+  }
+}
+
+
+.default-button {
+  position: absolute;
+  top: 92px;
+  padding: 0.4rem;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.2rem;
+  width: 280px;
+  letter-spacing: 0.1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.541) 0px 7px 29px 0px;
+	background-color: rgba(255, 255, 255, 0.13);
+	backdrop-filter: blur(10px);
+	border: 1px rgb(255, 255, 255, 0.1) solid;
+  font-family: 'desc';
+}
+
+.default-button:hover {
+  background-color: #9400d36b;
+  color: #ffffff;
+}
+
+.modal-overlay{
+  background-color: #00000050;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.modal {
+  margin: 1rem;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  min-height: 300px;
+  background-color: #fff;
+  border-radius: .8rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(15deg,#A85CF9,#5534A5,#4B7BE5,#6FDFDF);
+  padding: 1rem;
+}
+
+.close-modal{
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.5rem;
+  transform: scale(0.7);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.close-modal:hover{
+  transform: scale(1) rotate(180deg);
+}
+
+.modal-body{
+  padding: .5rem 1rem;
+}
+
+.modal-body div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.modal-body div input, textarea{
+  width: 100%;
+  padding: .5rem;
+  font-size: .8rem;
+  outline: none;
+  border: solid 1px #ccc;
+  margin-bottom: .4rem;
+  border-radius: .3rem;
+  font-family: "arial";
+}
+
+.modal-body div button {
+  padding: .5rem;
+  width: 30%;
+  font-size: 1.5rem;
+  color: #000000be;
+  border-radius: .3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.541) 0px 7px 29px 0px;
+	background-color: rgba(255, 255, 255, 0.13);
+	backdrop-filter: blur(10px);
+	border: 1px rgb(255, 255, 255, 0.1) solid;
+  font-family: 'desc';
+}
+
+.modal-body div button:hover{
+  background-color: #ae00ffc0;
+  color: rgb(255, 255, 255);
+}
+
+.button-modal-create{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Acoes {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Acoes__editar,
+.Acoes__deletar {
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-family: "desc";
+  padding: 5px;
+  max-width: 280px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 48%;
+  transition: all 0.3s ease-in-out;
+  margin-top: 1rem;
+}
+
+.Acoes__editar {
+  box-shadow: rgba(0, 0, 0, 0.541) 0px 7px 29px 0px;
+	background-color: rgba(17, 0, 255, 0.219);
+	backdrop-filter: blur(10px);
+	border: 1px rgb(255, 255, 255, 0.1) solid
+}
+
+.Acoes__editar:hover {
+  background-color: rgba(0, 0, 255, 0.425);
+  color: white;
+}
+
+.Acoes__deletar {
+  box-shadow: rgba(0, 0, 0, 0.541) 0px 7px 29px 0px;
+	background-color: #ff006a6c;
+	backdrop-filter: blur(10px);
+	border: 1px rgb(255, 255, 255, 0.1) solid
+}
+
+.Acoes__deletar:hover {
+  background-color: rgba(255, 0, 128, 0.74);
+  color: white;
+}
+
+@font-face {
+  font-family:love;
+  src: url('./assets/Icecold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal
+}
+@font-face {
+  font-family:picole;
+  src: url('./assets/Franchise.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal
+}
+@font-face {
+  font-family:desc;
+  src: url('./assets/fontastique.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal}
